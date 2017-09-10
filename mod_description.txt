@@ -1,10 +1,9 @@
-I was not happy with arrangement of the display, so I created my own version.
+I was asked to create this version :).
 
 main display (always):
 - current gear
 - current speed
 - cruise control
-- compass
 
 main display 1:
 - average (trip) consumption

@@ -1,0 +1,5 @@
+material : "ui"
+{
+	texture : "display_warning.tobj"
+	texture_name : "texture"
+}

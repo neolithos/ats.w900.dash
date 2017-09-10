@@ -6,10 +6,17 @@ $compress = @(
 	"mod_description.txt"
 );
 
+$compressSubs = @(
+	"ui",
+	"material"
+)
+
 $ofs = $rootPath.Length + 1;
-foreach ($fi in Get-ChildItem -Recurse (Join-Path $rootPath .\ui)) {
-	if (Test-Path -PathType Leaf $fi.FullName) {
-		$compress += $fi.FullName.Substring($ofs);
+foreach ($sub in $compressSubs) {
+	foreach ($fi in Get-ChildItem -Recurse (Join-Path $rootPath $sub)) {
+		if (Test-Path -PathType Leaf $fi.FullName) {
+			$compress += $fi.FullName.Substring($ofs);
+		}
 	}
 }
 
@@ -52,4 +59,4 @@ if (!($fi.Directory.Exists)) {
     $fi.Directory.Create();
 }
 Copy-Item $targetZip -Destination $fi.FullName;
-Copy-Item .\versions.sii -Destination $targetSteam;
+#Copy-Item .\versions.sii -Destination $targetSteam;

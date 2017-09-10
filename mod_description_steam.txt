@@ -1,13 +1,12 @@
 [h1]Kenworth W900 Dashboard[/h1]
 
-I was not happy with arrangement of the display, so I created my own version.
+I was asked to create this version :).
 
 main display (always):
 [list]
 [*] current gear
 [*] current speed
 [*] cruise control
-[*] compass
 [/list]
 
 main display 1:
