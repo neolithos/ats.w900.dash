@@ -214,7 +214,7 @@ ui::text_common : _nameless._.cur_speed {
  look_template: txt.kenworth.w900.cur_speed.neo
  text: ""
  coords_l: 220
- coords_r: 450
+ coords_r: 420
  coords_t: 800
  coords_b: 710
  area_l: 1
@@ -233,7 +233,7 @@ ui::text_common : _nameless._.cruisectrl {
  value: "100|km/h"
  look_template: txt.kenworth.w900.cruisectrl.neo
  text: ""
- coords_l: 450
+ coords_l: 420
  coords_r: 780
  coords_t: 793
  coords_b: 710

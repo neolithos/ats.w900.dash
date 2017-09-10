@@ -59,4 +59,4 @@ if (!($fi.Directory.Exists)) {
     $fi.Directory.Create();
 }
 Copy-Item $targetZip -Destination $fi.FullName;
-#Copy-Item .\versions.sii -Destination $targetSteam;
+Copy-Item .\versions.sii -Destination $targetSteam;
