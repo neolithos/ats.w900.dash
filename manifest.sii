@@ -1,0 +1,13 @@
+SiiNunit
+{
+	mod_package : .package_name 
+	{
+		package_version: "1.0"
+		display_name: "Kenworth W900 NeoDash"
+		author: "Neolithos"
+		category[]: "ui"
+		category[]: "interior"
+		icon: "icon.jpg"
+		description_file: "mod_description.txt"
+	}
+}

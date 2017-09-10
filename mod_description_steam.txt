@@ -1,0 +1,52 @@
+[h1]Kenworth W900 Dashboard[/h1]
+
+I was not happy with arrangement of the display, so I created my own version.
+
+main display (always):
+[list]
+[*] current gear
+[*] current speed
+[*] cruise control
+[*] compass
+[/list]
+
+main display 1:
+[list]
+[*] average (trip) consumption
+[*] instant consumption
+[/list]
+
+main display 2:
+[list]
+[*] remaining fuel
+[*] guessed operating range
+[/list]
+
+main display 3:
+[list]
+[*] water temperature
+[*] oil temperature
+[/list]
+
+main display 4:
+[list]
+[*]  ambient temperature
+[/list]
+
+
+rpm display:
+[list]
+[*] time
+[*] engine running time
+[/list]
+
+speed display:
+[list]
+[*] odometer
+[*] trip distance
+[/list]
+
+[h1]Disclaimer[/h1]
+
+This modification is for personal use only.
+It is prohibited to upload this modification on other servers.

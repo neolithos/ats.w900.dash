@@ -1,0 +1,30 @@
+I was not happy with arrangement of the display, so I created my own version.
+
+main display (always):
+- current gear
+- current speed
+- cruise control
+- compass
+
+main display 1:
+- average (trip) consumption
+- instant consumption
+
+main display 2:
+- remaining fuel
+- guessed operating range
+
+main display 3:
+- water temperature
+- oil temperature
+
+main display 4:
+-  ambient temperature
+
+rpm display:
+- time
+- engine running time
+
+speed display:
+- odometer
+- trip distance
