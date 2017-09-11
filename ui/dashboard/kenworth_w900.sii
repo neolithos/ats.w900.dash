@@ -193,7 +193,7 @@ ui::text_common : _nameless._.gear {
  value: D12
  look_template: txt.kenworth.w900.gear.neo
  text: ""
- coords_l: 80
+ coords_l: 20
  coords_r: 220
  coords_t: 793
  coords_b: 710
@@ -215,8 +215,8 @@ ui::text_common : _nameless._.cur_speed {
  text: ""
  coords_l: 220
  coords_r: 420
- coords_t: 800
- coords_b: 710
+ coords_t: 805
+ coords_b: 730
  area_l: 1
  area_r: 0
  area_t: 0
@@ -361,8 +361,8 @@ ui::text : _nameless._.displayint0 {
  text: "<ret> \r\n<img src=/material/ui/dashboard/kenworth_w900/details.mat height=20 width=40 left=0.35 right=1 bottom=0.35><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat height=30 width=30 right=0.35 bottom=0.35><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat height=30 width=30 right=0.35 bottom=0.35><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat height=30 width=30 right=0.35 bottom=0.35><br>\r\n"
  coords_l: 10
  coords_r: 138
- coords_t: 700
- coords_b: 460
+ coords_t: 680
+ coords_b: 430
  area_l: 1
  area_r: 0
  area_t: 0
@@ -377,12 +377,12 @@ ui::text : _nameless._.displayint0 {
 
 ui::text_common : _nameless._.economy {
  value: "Economy"
- look_template: txt.kenworth.text0
+ look_template: txt.kenworth.w900.text2.neo
  text: ""
  coords_l: 100
  coords_r: 800
- coords_t: 720
- coords_b: 630
+ coords_t: 700
+ coords_b: 620
  area_l: 1
  area_r: 0
  area_t: 0
@@ -467,8 +467,8 @@ ui::text : _nameless._.displayint1 {
  text: "<ret>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat height=30 width=30 right=0.35 bottom=0.35><br> \r\n<img src=/material/ui/dashboard/kenworth_w900/details.mat height=20 width=40 left=0.35 right=1 bottom=0.35><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat height=30 width=30 right=0.35 bottom=0.35><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat height=30 width=30 right=0.35 bottom=0.35><br>\r\n"
  coords_l: 10
  coords_r: 138
- coords_t: 700
- coords_b: 460
+ coords_t: 680
+ coords_b: 430
  area_l: 1
  area_r: 0
  area_t: 0
@@ -483,12 +483,12 @@ ui::text : _nameless._.displayint1 {
 
 ui::text_common : _nameless._.fuel_text {
  value: "Range"
- look_template: txt.kenworth.text0
+ look_template: txt.kenworth.w900.text2.neo
  text: ""
  coords_l: 100
  coords_r: 800
- coords_t: 720
- coords_b: 630
+ coords_t: 700
+ coords_b: 620
  area_l: 1
  area_r: 0
  area_t: 0
@@ -613,8 +613,8 @@ ui::text : _nameless._.displayint2 {
  text: "<ret>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat height=30 width=30 right=0.35 bottom=0.35><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat height=30 width=30 right=0.35 bottom=0.35><br> \r\n<img src=/material/ui/dashboard/kenworth_w900/details.mat height=20 width=40 left=0.35 right=1 bottom=0.35><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat height=30 width=30 right=0.35 bottom=0.35><br>\r\n"
  coords_l: 10
  coords_r: 138
- coords_t: 700
- coords_b: 460
+ coords_t: 680
+ coords_b: 430
  area_l: 1
  area_r: 0
  area_t: 0
@@ -629,12 +629,12 @@ ui::text : _nameless._.displayint2 {
 
 ui::text_common : _nameless._.oilwater {
  value: "Temperatures"
- look_template: txt.kenworth.text0
+ look_template: txt.kenworth.w900.text2.neo
  text: ""
  coords_l: 100
  coords_r: 800
- coords_t: 720
- coords_b: 630
+ coords_t: 700
+ coords_b: 620
  area_l: 1
  area_r: 0
  area_t: 0
@@ -757,8 +757,8 @@ ui::text : _nameless._.displayint3 {
  text: "<ret>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat height=30 width=30 right=0.35 bottom=0.35><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat height=30 width=30 right=0.35 bottom=0.35><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat height=30 width=30 right=0.35 bottom=0.35><br> \r\n<img src=/material/ui/dashboard/kenworth_w900/details.mat height=20 width=40 left=0.35 right=1 bottom=0.35><br>\r\n"
  coords_l: 10
  coords_r: 138
- coords_t: 700
- coords_b: 460
+ coords_t: 680
+ coords_b: 430
  area_l: 1
  area_r: 0
  area_t: 0
@@ -773,12 +773,12 @@ ui::text : _nameless._.displayint3 {
 
 ui::text_common : _nameless._.ambient {
  value: "Outside"
- look_template: txt.kenworth.text0
+ look_template: txt.kenworth.w900.text2.neo
  text: ""
  coords_l: 100
  coords_r: 800
- coords_t: 720
- coords_b: 630
+ coords_t: 700
+ coords_b: 620
  area_l: 1
  area_r: 0
  area_t: 0
@@ -796,7 +796,7 @@ ui::text_common : _nameless._.temptext {
  look_template:  txt.kenworth.w900.text1.neo
  text: ""
  coords_l: 170
- coords_r: 330
+ coords_r: 380
  coords_t: 610
  coords_b: 520
  area_l: 1
