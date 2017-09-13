@@ -31,5 +31,8 @@ ui::text_template : txt.kenworth.w900.cruisectrl.neo {
 	name: "Kenworth W900  cruise"
 	text: "<color value=cc88ff22><align hstyle=right><font face=/font/big.font xscale=5 yscale=5>%0 %1</font></align>"
 }
-
+ui::text_template : txt.kenworth.w900.direct.neo {
+	name: "Kenworth W900 Number Direction"
+	text: "<color value=cc88ff22><align hstyle=center><font face=/font/big.font xscale=4 yscale=4>%0</font></align>"
+}
 }

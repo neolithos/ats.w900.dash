@@ -75,7 +75,7 @@ ui::text : _nameless._.kgroundunlit {
 # shared screen, wird immer angezeigt
 ui::group : _nameless._.sharedisplay {
  fitting: false
- my_children: 7
+ my_children: 8
  my_children[0]: _nameless._.dz_oben
  my_children[1]: _nameless._.dz_unten
  my_children[2]: _nameless._.odometer
@@ -84,6 +84,7 @@ ui::group : _nameless._.sharedisplay {
  my_children[4]: _nameless._.gear
  my_children[5]: _nameless._.cruisectrl
  my_children[6]: _nameless._.cur_speed
+ my_children[7]: _nameless._.direct
 
  coords_l: 0
  coords_r: 800
@@ -248,6 +249,27 @@ ui::text_common : _nameless._.cruisectrl {
  apparent_depth: 0
  my_parent: _nameless._.sharedisplay
 }
+
+ui::text_common : _nameless._.direct {
+ value: "NW"
+ look_template: txt.kenworth.w900.direct.neo
+ text: ""
+ coords_l: 10
+ coords_r: 130
+ coords_t: 480
+ coords_b: 410
+ area_l: 1
+ area_r: 0
+ area_t: 0
+ area_b: 1
+ id: 1220
+ layer: 4
+ tab: -1
+ pointer: -1
+ apparent_depth: 0
+ my_parent: _nameless._.sharedisplay
+}
+
 
 ###############################################################################
 # Warning
