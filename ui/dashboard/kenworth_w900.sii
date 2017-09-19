@@ -110,7 +110,7 @@ ui::text_common : _nameless._.dz_oben {
  text: ""
  coords_l: 0
  coords_r: 380
- coords_t: 400
+ coords_t: 390
  coords_b: 310
  area_l: 1
  area_r: 0
@@ -127,12 +127,12 @@ ui::text_common : _nameless._.dz_oben {
 # Laufstunden
 ui::text_common : _nameless._.dz_unten {
  value: "999|h"
- look_template: txt.kenworth.w900.lcd_unit.neo
+ look_template: txt.kenworth.w900.lcd_unit_h.neo
  text: ""
  coords_l: 0
  coords_r: 380
- coords_t: 310
- coords_b: 210
+ coords_t: 300
+ coords_b: 220
  area_l: 1
  area_r: 0
  area_t: 0
@@ -153,7 +153,7 @@ ui::text_common : _nameless._.odometer {
  text: ""
  coords_l: 383
  coords_r: 780
- coords_t: 400
+ coords_t: 390
  coords_b: 310
  area_l: 1
  area_r: 0
@@ -174,8 +174,8 @@ ui::text_common : _nameless._.trip_len {
  text: ""
  coords_l: 383
  coords_r: 780
- coords_t: 310
- coords_b: 210
+ coords_t: 300
+ coords_b: 220
  area_l: 1
  area_r: 0
  area_t: 0
@@ -295,14 +295,14 @@ ui::group : _nameless._.warning {
  my_parent: _nameless.06caf7760
 }
 
-ui::text_common : _nameless.warning.service {
- value: "SERVICE!\r\n"
+ui::text_common : _nameless.warning.visit {
+ value: "Visit\r\n"
  look_template: txt.kenworth.test_wrn
  text: ""
- coords_l: 157
- coords_r: 861
- coords_t: 616
- coords_b: 514
+ coords_l: 272
+ coords_r: 976
+ coords_t: 660
+ coords_b: 580
  area_l: 1
  area_r: 0
  area_t: 0
@@ -315,14 +315,14 @@ ui::text_common : _nameless.warning.service {
  my_parent: _nameless._.warning
 }
 
-ui::text_common : _nameless.warning.visit {
- value: "Visit\r\n"
+ui::text_common : _nameless.warning.service {
+ value: "SERVICE!\r\n"
  look_template: txt.kenworth.test_wrn
  text: ""
- coords_l: 272
- coords_r: 976
- coords_t: 718
- coords_b: 616
+ coords_l: 157
+ coords_r: 861
+ coords_t: 580
+ coords_b: 500
  area_l: 1
  area_r: 0
  area_t: 0

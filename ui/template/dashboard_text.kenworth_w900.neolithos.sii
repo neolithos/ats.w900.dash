@@ -2,11 +2,15 @@ SiiNunit
 {
 ui::text_template: txt.kenworth.w900.lcd.neo {
 	name: "Kenworth W900 Numbers LCD num"
-	text: "<color value=cc88ff22><align hstyle=right><font face=/font/big.font xscale=6 yscale=6>%0</font></align>"
+	text: "<color value=cc88ff22><align hstyle=right><font face=/font/lcd_number.font xscale=2.15 yscale=2.15>%0</font></align>"
 }
 ui::text_template: txt.kenworth.w900.lcd_unit.neo {
 	name: "Kenworth W900 Numbers LCD+unit"
-	text: "<color value=cc88ff22><align hstyle=right><font face=/font/big.font xscale=5 yscale=5>%0 %1</font></align>"
+	text: "<color value=cc88ff22><align hstyle=right vstyle=bottom><font face=/font/lcd_number.font xscale=1.9 yscale=1.9>%0</font><font face=/font/big.font xscale=4 yscale=4> %1</font></align>"
+}
+ui::text_template: txt.kenworth.w900.lcd_unit_h.neo {
+	name: "Kenworth W900 Numbers LCD+unit"
+	text: "<color value=cc88ff22><align hstyle=right vstyle=bottom><font face=/font/lcd_number.font xscale=1.9 yscale=1.9>%0</font><font face=/font/big.font xscale=4 yscale=4> h</font></align>"
 }
 
 ui::text_template : txt.kenworth.w900.text1.neo {
