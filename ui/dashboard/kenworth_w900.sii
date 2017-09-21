@@ -701,7 +701,7 @@ ui::text_common : _nameless._.watertemp {
  area_r: 0
  area_t: 0
  area_b: 1
- id: 1010
+ id: 1090
  layer: 1
  tab: -1
  pointer: -1
@@ -741,7 +741,7 @@ ui::text_common : _nameless._.oiltemp {
  area_r: 0
  area_t: 0
  area_b: 1
- id: 1090
+ id: 1010
  layer: 1
  tab: -1
  pointer: -1

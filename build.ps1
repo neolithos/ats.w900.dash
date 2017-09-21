@@ -1,4 +1,7 @@
 
+#Compress-Archive .\build.ps1 test.zip
+#Remove-Item test.zip
+
 $rootPath = "D:\ATS\kenworth_w900_dashboard";
 $compress = @(
 	"icon.jpg",
