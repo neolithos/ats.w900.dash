@@ -82,7 +82,7 @@ function New-ScsMod(
 
 	# copy to mod folder
 	if($ETS) {
-		$gameType = "European Truck Simulator"
+		$gameType = "Euro Truck Simulator 2"
 	} else {
 		$gameType = "American Truck Simulator"
 	}
