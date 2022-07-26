@@ -9,5 +9,6 @@ SiiNunit
 		category[]: "interior"
 		icon: "icon.jpg"
 		description_file: "mod_description.txt"
+		mp_mod_optional: true
 	}
 }
