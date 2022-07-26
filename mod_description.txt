@@ -27,3 +27,5 @@ rpm display:
 speed display:
 - odometer
 - trip distance
+
+For multiplayer this mod is marked as optional.
