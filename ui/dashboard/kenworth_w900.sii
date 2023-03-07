@@ -284,7 +284,7 @@ ui::group : _nameless._.warning {
 
 ui::text_common : _nameless.warning.visit {
  value: "Visit\r\n"
- look_template: txt.kenworth.test_wrn
+ look_template: txt.kw_w900.text0
  text: ""
  coords_l: 272
  coords_r: 976
@@ -303,7 +303,7 @@ ui::text_common : _nameless.warning.visit {
 
 ui::text_common : _nameless.warning.service {
  value: "SERVICE!\r\n"
- look_template: txt.kenworth.test_wrn
+ look_template: txt.kw_w900.text0
  text: ""
  coords_l: 157
  coords_r: 861
@@ -400,7 +400,7 @@ ui::text_common : _nameless._.economy {
 
 ui::text_common : _nameless._.average {
  value: "9.2|mpg"
- look_template: txt.kenworth.val_num
+ look_template: txt.kw_w900.val_num
  text: ""
  coords_l: 100
  coords_r: 760
@@ -419,7 +419,7 @@ ui::text_common : _nameless._.average {
 
 ui::text_common : _nameless._.instant {
  value: "25|mpg"
- look_template: txt.kenworth.val_num
+ look_template: txt.kw_w900.val_num
  text: ""
  coords_l: 100
  coords_r: 760
@@ -520,7 +520,7 @@ ui::text_common : _nameless._.fueltext {
 
 ui::text_common : _nameless._.fuel {
  value: "99|gal"
- look_template: txt.kenworth.val_num
+ look_template: txt.kw_w900.val_num
  text: ""
  coords_l: 330
  coords_r: 760
@@ -558,7 +558,7 @@ ui::text_common : _nameless._.fueldisttext {
 
 ui::text_common : _nameless._.fueldist {
  value: "99999|km"
- look_template: txt.kenworth.val_num
+ look_template: txt.kw_w900.val_num
  text: ""
  coords_l: 330
  coords_r: 760
@@ -659,7 +659,7 @@ ui::text_common : _nameless._.watertext {
 
 ui::text_common : _nameless._.watertemp {
  value: "99|F"
- look_template: txt.kenworth.temp
+ look_template: txt.kw_w900.temp
  text: ""
  coords_l: 400
  coords_r: 760
@@ -697,7 +697,7 @@ ui::text_common : _nameless._.oiltext {
 
 ui::text_common : _nameless._.oiltemp {
  value: "99|F"
- look_template: txt.kenworth.temp
+ look_template: txt.kw_w900.temp
  text: ""
  coords_l: 400
  coords_r: 760
@@ -796,7 +796,7 @@ ui::text_common : _nameless._.temptext {
 
 ui::text_common : _nameless._.temp {
  value: "150|F"
- look_template: txt.kenworth.temp
+ look_template: txt.kw_w900.temp
  text: ""
  coords_l: 330
  coords_r: 760
