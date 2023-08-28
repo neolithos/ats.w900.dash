@@ -19,7 +19,15 @@ ui::text_template : txt.kenworth.w900.text1.neo {
 }
 ui::text_template : txt.kenworth.w900.text2.neo {
 	name: "Kenworth W900 Title"
-	text: "<color value=cc88ff22><font face=/font/big.font xscale=5 yscale=5>%0</font>"
+	text: "<color value=cc88ff22><font face=/font/big.font xscale=4 yscale=5>%0</font>"
+}
+ui::text_template : txt.kenworth.w900.val_num.neo {
+	name: "Kenworth W900 number + units"
+	text: "<color value=ff56ff22><align hstyle=right><font face=/font/big.font xscale=4 yscale=5>%0</font><offset vshift=30><font face=/font/big.font xscale=2.5 yscale=3> %1</font></align>"
+}
+ui::text_template : txt.kenworth.w900.val_text.neo {
+	name: "Kenworth W900 text"
+	text: "<color value=ff56ff22><align hstyle=right><font face=/font/big.font xscale=4 yscale=5>%0</font></align>"
 }
 
 ui::text_template : txt.kenworth.w900.gear.neo {

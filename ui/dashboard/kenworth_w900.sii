@@ -12,14 +12,15 @@ ui::window : _nameless.06caf7760 {
  my_children[2]: _nameless._.rightbglit
  my_children[3]: _nameless._.sharedisplay
 
- my_children[4]: _nameless._.display0
- my_children[5]: _nameless._.display1
- my_children[6]: _nameless._.display2
- my_children[7]: _nameless._.display3
+ my_children[4]: _nameless._.display4
+ my_children[5]: _nameless._.display0
+ my_children[6]: _nameless._.display1
+ my_children[7]: _nameless._.display2
+ my_children[8]: _nameless._.display3
 
- my_children[8]: _nameless._.warning
+ my_children[9]: _nameless._.warning
 
- my_children[9]: _nameless._.rect
+# my_children[9]: _nameless._.rect
 
  coords_l: 0
  coords_r: 800
@@ -89,28 +90,28 @@ ui::text : _nameless._.rightbglit {
  my_parent: _nameless.06caf7760
 }
 
-ui::text : _nameless._.rect {
- text: "<img src=/material/ui/dashboard/kenworth_w900/display_warning.mat top=p128 left=p128 right=p408 bottom=p144 xscale=stretch yscale=stretch>"
- coords_l: 0
- coords_l: 220
- coords_r: 420
- coords_t: 810
- coords_b: 720
- area_l: 1
- area_r: 0
- area_t: 0
- area_b: 1
- id: 10
- layer: 1
- tab: -1
- pointer: -1
- my_parent: _nameless.06caf7760
-}
+#ui::text : _nameless._.rect {
+# text: "<img src=/material/ui/dashboard/kenworth_w900/display_warning.mat top=p128 left=p128 right=p408 bottom=p144 xscale=stretch yscale=stretch>"
+# coords_l: 0
+# coords_l: 220
+# coords_r: 420
+# coords_t: 810
+# coords_b: 720
+# area_l: 1
+# area_r: 0
+# area_t: 0
+# area_b: 1
+# id: 10
+# layer: 1
+# tab: -1
+# pointer: -1
+# my_parent: _nameless.06caf7760
+#}
 
 # shared screen, wird immer angezeigt
 ui::group : _nameless._.sharedisplay {
  fitting: false
- my_children: 8
+ my_children: 11
  my_children[0]: _nameless._.dz_oben
  my_children[1]: _nameless._.dz_unten
  my_children[2]: _nameless._.odometer
@@ -120,6 +121,10 @@ ui::group : _nameless._.sharedisplay {
  my_children[5]: _nameless._.cruisectrl
  my_children[6]: _nameless._.cur_speed
  my_children[7]: _nameless._.direct
+
+ my_children[8]: _nameless._.park_licht
+ my_children[9]: _nameless._.ab_licht
+ my_children[10]: _nameless._.diff
 
  coords_l: 0
  coords_r: 800
@@ -226,8 +231,8 @@ ui::text_common : _nameless._.gear {
  text: ""
  coords_l: 20
  coords_r: 220
- coords_t: 793
- coords_b: 670
+ coords_t: 780
+ coords_b: 680
  area_l: 1
  area_r: 0
  area_t: 0
@@ -264,8 +269,8 @@ ui::text_common : _nameless._.cruisectrl {
  text: ""
  coords_l: 420
  coords_r: 780
- coords_t: 793
- coords_b: 670
+ coords_t: 780
+ coords_b: 680
  area_l: 1
  area_r: 0
  area_t: 0
@@ -296,6 +301,56 @@ ui::text_common : _nameless._.direct {
  my_parent: _nameless._.sharedisplay
 }
 
+ui::text : _nameless._.park_licht {
+ text: "<img src=/material/ui/dashboard/kenworth_w900/details.mat xscale=stretch yscale=stretch left=p0 right=p64 top=p200 bottom=p248 color=ff56ff22>"
+ coords_l: 710
+ coords_r: 790
+ coords_t: 600
+ coords_b: 500
+ area_l: 1
+ area_r: 0
+ area_t: 0
+ area_b: 1
+ id: 1470
+ layer: 1
+ tab: -1
+ pointer: -1
+ my_parent: _nameless._.sharedisplay
+}
+
+ui::text : _nameless._.ab_licht {
+ text: "<img src=/material/ui/dashboard/kenworth_w900/details.mat xscale=stretch yscale=stretch left=p0 right=p64 top=p132 bottom=p182 color=ff56ff22>"
+ coords_l: 710
+ coords_r: 790
+ coords_t: 500
+ coords_b: 400
+ area_l: 1
+ area_r: 0
+ area_t: 0
+ area_b: 1
+ id: 1480
+ layer: 1
+ tab: -1
+ pointer: -1
+ my_parent: _nameless._.sharedisplay
+}
+
+ui::text : _nameless._.diff {
+ text: "<img src=/material/ui/dashboard/kenworth_w900/details.mat xscale=stretch yscale=stretch left=p190 right=p254 top=p77 bottom=p125 color=ff56ff22>"
+ coords_l: 710
+ coords_r: 790
+ coords_t: 400
+ coords_b: 300
+ area_l: 1
+ area_r: 0
+ area_t: 0
+ area_b: 1
+ id: 1490
+ layer: 1
+ tab: -1
+ pointer: -1
+ my_parent: _nameless._.sharedisplay
+}
 
 ###############################################################################
 # Warning
@@ -380,11 +435,14 @@ ui::text : _nameless.warning.background {
 
 ui::group : _nameless._.display0 {
  fitting: false
- my_children: 4
+ my_children: 6
  my_children[0]: _nameless._.displayint0
  my_children[1]: _nameless._.economy
  my_children[2]: _nameless._.average
  my_children[3]: _nameless._.instant
+ my_children[4]: _nameless._.bar_inst
+ my_children[5]: _nameless._.bar_inst_def
+
  coords_l: 0
  coords_r: 800
  coords_t: 800
@@ -401,11 +459,11 @@ ui::group : _nameless._.display0 {
 }
 
 ui::text : _nameless._.displayint0 {
- text: "<ret> \r\n<img src=/material/ui/dashboard/kenworth_w900/details.mat height=20 width=40 left=0.35 right=1 bottom=0.35><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat height=30 width=30 right=0.35 bottom=0.35><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat height=30 width=30 right=0.35 bottom=0.35><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat height=30 width=30 right=0.35 bottom=0.35><br>\r\n"
+ text: "<color value=ff56ff22>\r\n<img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p64 right=p128 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n"
  coords_l: 10
  coords_r: 138
- coords_t: 680
- coords_b: 430
+ coords_t: 620
+ coords_b: 300
  area_l: 1
  area_r: 0
  area_t: 0
@@ -423,8 +481,8 @@ ui::text_common : _nameless._.economy {
  text: ""
  coords_l: 100
  coords_r: 800
- coords_t: 700
- coords_b: 620
+ coords_t: 620
+ coords_b: 540
  area_l: 1
  area_r: 0
  area_t: 0
@@ -438,12 +496,12 @@ ui::text_common : _nameless._.economy {
 
 ui::text_common : _nameless._.average {
  value: "9.2|mpg"
- look_template: txt.kw_w900.val_num
+ look_template: txt.kenworth.w900.val_num.neo
  text: ""
  coords_l: 100
- coords_r: 760
- coords_t: 620
- coords_b: 520
+ coords_r: 700
+ coords_t: 510
+ coords_b: 430
  area_l: 1
  area_r: 0
  area_t: 0
@@ -457,17 +515,51 @@ ui::text_common : _nameless._.average {
 
 ui::text_common : _nameless._.instant {
  value: "25|mpg"
- look_template: txt.kw_w900.val_num
+ look_template: txt.kenworth.w900.val_num.neo
  text: ""
  coords_l: 100
- coords_r: 760
- coords_t: 520
- coords_b: 420
+ coords_r: 700
+ coords_t: 410
+ coords_b: 330
  area_l: 1
  area_r: 0
  area_t: 0
  area_b: 1
  id: 1160
+ layer: 1
+ tab: -1
+ pointer: -1
+ my_parent: _nameless._.display0
+}
+
+ui::text : _nameless._.bar_inst {
+ text: "<color value=ff56ff22><img src=/material/ui/white.mat xscale=stretch yscale=stretch>"
+ coords_l: 220
+ coords_r: 700
+ coords_t: 310
+ coords_b: 230
+ area_l: 1
+ area_r: 0
+ area_t: 0
+ area_b: 1
+ id: 1350
+ layer: 2
+ tab: -1
+ pointer: -1
+ my_parent: _nameless._.display0
+}
+
+ui::text : _nameless._.bar_inst_def {
+ text: "H~~5~~0"
+ coords_l: 220
+ coords_r: 700
+ coords_t: 310
+ coords_b: 230
+ area_l: 1
+ area_r: 0
+ area_t: 0
+ area_b: 1
+ id: 1355
  layer: 1
  tab: -1
  pointer: -1
@@ -502,11 +594,11 @@ ui::group : _nameless._.display1 {
 }
 
 ui::text : _nameless._.displayint1 {
- text: "<ret>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat height=30 width=30 right=0.35 bottom=0.35><br> \r\n<img src=/material/ui/dashboard/kenworth_w900/details.mat height=20 width=40 left=0.35 right=1 bottom=0.35><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat height=30 width=30 right=0.35 bottom=0.35><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat height=30 width=30 right=0.35 bottom=0.35><br>\r\n"
+ text: "<color value=ff56ff22>\r\n<img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p64 right=p128 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n"
  coords_l: 10
  coords_r: 138
- coords_t: 680
- coords_b: 430
+ coords_t: 620
+ coords_b: 300
  area_l: 1
  area_r: 0
  area_t: 0
@@ -524,8 +616,8 @@ ui::text_common : _nameless._.fuel_text {
  text: ""
  coords_l: 100
  coords_r: 800
- coords_t: 700
- coords_b: 620
+ coords_t: 620
+ coords_b: 540
  area_l: 1
  area_r: 0
  area_t: 0
@@ -543,8 +635,8 @@ ui::text_common : _nameless._.fueltext {
  text: ""
  coords_l: 170
  coords_r: 330
- coords_t: 610
- coords_b: 520
+ coords_t: 510
+ coords_b: 420
  area_l: 1
  area_r: 0
  area_t: 0
@@ -558,12 +650,12 @@ ui::text_common : _nameless._.fueltext {
 
 ui::text_common : _nameless._.fuel {
  value: "99|gal"
- look_template: txt.kw_w900.val_num
+ look_template: txt.kenworth.w900.val_num.neo
  text: ""
- coords_l: 330
- coords_r: 760
- coords_t: 620
- coords_b: 520
+ coords_l: 100
+ coords_r: 700
+ coords_t: 510
+ coords_b: 430
  area_l: 1
  area_r: 0
  area_t: 0
@@ -581,8 +673,8 @@ ui::text_common : _nameless._.fueldisttext {
  text: ""
  coords_l: 170
  coords_r: 330
- coords_t: 510
- coords_b: 420
+ coords_t: 410
+ coords_b: 220
  area_l: 1
  area_r: 0
  area_t: 0
@@ -596,12 +688,12 @@ ui::text_common : _nameless._.fueldisttext {
 
 ui::text_common : _nameless._.fueldist {
  value: "99999|km"
- look_template: txt.kw_w900.val_num
+ look_template: txt.kenworth.w900.val_num.neo
  text: ""
- coords_l: 330
- coords_r: 760
- coords_t: 520
- coords_b: 420
+ coords_l: 100
+ coords_r: 700
+ coords_t: 410
+ coords_b: 330
  area_l: 1
  area_r: 0
  area_t: 0
@@ -641,11 +733,11 @@ ui::group : _nameless._.display2 {
 }
 
 ui::text : _nameless._.displayint2 {
- text: "<ret>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat height=30 width=30 right=0.35 bottom=0.35><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat height=30 width=30 right=0.35 bottom=0.35><br> \r\n<img src=/material/ui/dashboard/kenworth_w900/details.mat height=20 width=40 left=0.35 right=1 bottom=0.35><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat height=30 width=30 right=0.35 bottom=0.35><br>\r\n"
+ text: "<color value=ff56ff22>\r\n<img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p64 right=p128 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n"
  coords_l: 10
  coords_r: 138
- coords_t: 680
- coords_b: 430
+ coords_t: 620
+ coords_b: 300
  area_l: 1
  area_r: 0
  area_t: 0
@@ -663,8 +755,8 @@ ui::text_common : _nameless._.oilwater {
  text: ""
  coords_l: 100
  coords_r: 800
- coords_t: 700
- coords_b: 620
+ coords_t: 620
+ coords_b: 540
  area_l: 1
  area_r: 0
  area_t: 0
@@ -681,9 +773,9 @@ ui::text_common : _nameless._.watertext {
  look_template:  txt.kenworth.w900.text1.neo
  text: ""
  coords_l: 170
- coords_r: 400
- coords_t: 610
- coords_b: 520
+ coords_r: 330
+ coords_t: 510
+ coords_b: 420
  area_l: 1
  area_r: 0
  area_t: 0
@@ -697,12 +789,12 @@ ui::text_common : _nameless._.watertext {
 
 ui::text_common : _nameless._.watertemp {
  value: "99|F"
- look_template: txt.kw_w900.temp
+ look_template: txt.kenworth.w900.val_num.neo
  text: ""
- coords_l: 400
- coords_r: 760
- coords_t: 620
- coords_b: 520
+ coords_l: 100
+ coords_r: 700
+ coords_t: 510
+ coords_b: 430
  area_l: 1
  area_r: 0
  area_t: 0
@@ -720,8 +812,8 @@ ui::text_common : _nameless._.oiltext {
  text: ""
  coords_l: 170
  coords_r: 400
- coords_t: 510
- coords_b: 420
+ coords_t: 410
+ coords_b: 320
  area_l: 1
  area_r: 0
  area_t: 0
@@ -735,12 +827,12 @@ ui::text_common : _nameless._.oiltext {
 
 ui::text_common : _nameless._.oiltemp {
  value: "99|F"
- look_template: txt.kw_w900.temp
+ look_template: txt.kenworth.w900.val_num.neo
  text: ""
- coords_l: 400
- coords_r: 760
- coords_t: 520
- coords_b: 420
+ coords_l: 100
+ coords_r: 700
+ coords_t: 410
+ coords_b: 330
  area_l: 1
  area_r: 0
  area_t: 0
@@ -778,11 +870,11 @@ ui::group : _nameless._.display3 {
 }
 
 ui::text : _nameless._.displayint3 {
- text: "<ret>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat height=30 width=30 right=0.35 bottom=0.35><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat height=30 width=30 right=0.35 bottom=0.35><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat height=30 width=30 right=0.35 bottom=0.35><br> \r\n<img src=/material/ui/dashboard/kenworth_w900/details.mat height=20 width=40 left=0.35 right=1 bottom=0.35><br>\r\n"
+ text: "<color value=ff56ff22>\r\n<img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p64 right=p128 top=p0 bottom=p64 height=50 width=50><br>\r\n"
  coords_l: 10
  coords_r: 138
- coords_t: 680
- coords_b: 430
+ coords_t: 620
+ coords_b: 300
  area_l: 1
  area_r: 0
  area_t: 0
@@ -800,9 +892,9 @@ ui::text_common : _nameless._.ambient {
  text: ""
  coords_l: 100
  coords_r: 800
- coords_t: 700
- coords_b: 620
- area_l: 1
+ coords_t: 620
+ coords_b: 540
+  area_l: 1
  area_r: 0
  area_t: 0
  area_b: 1
@@ -818,9 +910,9 @@ ui::text_common : _nameless._.temptext {
  look_template:  txt.kenworth.w900.text1.neo
  text: ""
  coords_l: 170
- coords_r: 380
- coords_t: 610
- coords_b: 520
+ coords_r: 430
+ coords_t: 510
+ coords_b: 420
  area_l: 1
  area_r: 0
  area_t: 0
@@ -834,12 +926,12 @@ ui::text_common : _nameless._.temptext {
 
 ui::text_common : _nameless._.temp {
  value: "150|F"
- look_template: txt.kw_w900.temp
+ look_template: txt.kenworth.w900.val_num.neo
  text: ""
- coords_l: 330
- coords_r: 760
- coords_t: 620
- coords_b: 520
+ coords_l: 100
+ coords_r: 700
+ coords_t: 510
+ coords_b: 430
  area_l: 1
  area_r: 0
  area_t: 0
@@ -849,6 +941,187 @@ ui::text_common : _nameless._.temp {
  tab: -1
  pointer: -1
  my_parent: _nameless._.display3
+}
+
+
+###############################################################################
+# Display 4
+
+ui::group : _nameless._.display4 {
+ fitting: false
+ my_children: 8
+ my_children[0]: _nameless._.displayint4
+ my_children[1]: _nameless._.trip_text
+ my_children[2]: _nameless._.etatext
+ my_children[3]: _nameless._.eta
+ my_children[4]: _nameless._.remaintext
+ my_children[5]: _nameless._.remain
+ my_children[6]: _nameless._.resttext
+ my_children[7]: _nameless._.rest
+
+ coords_l: 0
+ coords_r: 800
+ coords_t: 800
+ coords_b: 0
+ area_l: 0
+ area_r: 800
+ area_t: 800
+ area_b: 0
+ id: 500
+ layer: -1
+ tab: -1
+ pointer: -1
+ my_parent: _nameless.06caf7760
+}
+
+ui::text : _nameless._.displayint4 {
+ text: "<color value=ff56ff22>\r\n<img src=/material/ui/dashboard/kenworth_w900/details.mat left=p64 right=p128 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n"
+ coords_l: 10
+ coords_r: 138
+ coords_t: 620
+ coords_b: 300
+ area_l: 1
+ area_r: 0
+ area_t: 0
+ area_b: 1
+ id: 0
+ layer: 1
+ tab: -1
+ pointer: -1
+ my_parent: _nameless._.display4
+}
+
+ui::text_common : _nameless._.trip_text {
+ value: "Trip"
+ look_template: txt.kenworth.w900.text2.neo
+ text: ""
+ coords_l: 100
+ coords_r: 800
+ coords_t: 620
+ coords_b: 540
+ area_l: 1
+ area_r: 0
+ area_t: 0
+ area_b: 1
+ id: 0
+ layer: 0
+ tab: -1
+ pointer: -1
+ my_parent: _nameless._.display4
+}
+
+ui::text_common : _nameless._.etatext {
+ value: "Eta"
+ look_template: txt.kenworth.w900.text1.neo
+ text: ""
+ coords_l: 170
+ coords_r: 500
+ coords_t: 510
+ coords_b: 420
+ area_l: 1
+ area_r: 0
+ area_t: 0
+ area_b: 1
+ id: 0
+ layer: 1
+ tab: -1
+ pointer: -1
+ my_parent: _nameless._.display4
+}
+
+ui::text_common : _nameless._.eta {
+ value: "99:99"
+ look_template: txt.kenworth.w900.val_text.neo
+ text: ""
+ coords_l: 300
+ coords_r: 700
+ coords_t: 510
+ coords_b: 430
+ area_l: 1
+ area_r: 0
+ area_t: 0
+ area_b: 1
+ id: 1390
+ layer: 1
+ tab: -1
+ pointer: -1
+ my_parent: _nameless._.display4
+}
+
+ui::text_common : _nameless._.remaintext {
+ value: "Remain"
+ look_template: txt.kenworth.w900.text1.neo
+ text: ""
+ coords_l: 170
+ coords_r: 500
+ coords_t: 410
+ coords_b: 330
+ area_l: 1
+ area_r: 0
+ area_t: 0
+ area_b: 1
+ id: 0
+ layer: 1
+ tab: -1
+ pointer: -1
+ my_parent: _nameless._.display4
+}
+
+ui::text_common : _nameless._.remain {
+ value: "99:99"
+ look_template: txt.kenworth.w900.val_text.neo
+ text: ""
+ coords_l: 300
+ coords_r: 700
+ coords_t: 410
+ coords_b: 330
+ area_l: 1
+ area_r: 0
+ area_t: 0
+ area_b: 1
+ id: 1530
+ layer: 1
+ tab: -1
+ pointer: -1
+ my_parent: _nameless._.display4
+}
+
+ui::text_common : _nameless._.resttext {
+ value: "Rest"
+ look_template:  txt.kenworth.w900.text1.neo
+ text: ""
+ coords_l: 170
+ coords_r: 500
+ coords_t: 310
+ coords_b: 230
+ area_l: 1
+ area_r: 0
+ area_t: 0
+ area_b: 1
+ id: 0
+ layer: 1
+ tab: -1
+ pointer: -1
+ my_parent: _nameless._.display4
+}
+
+ui::text_common : _nameless._.rest {
+ value: "99:99"
+ look_template: txt.kenworth.w900.val_text.neo
+ text: ""
+ coords_l: 300
+ coords_r: 700
+ coords_t: 310
+ coords_b: 230
+ area_l: 1
+ area_r: 0
+ area_t: 0
+ area_b: 1
+ id: 1540
+ layer: 1
+ tab: -1
+ pointer: -1
+ my_parent: _nameless._.display4
 }
 
 }
