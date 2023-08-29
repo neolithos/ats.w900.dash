@@ -15,7 +15,7 @@ ui::text_template: txt.kenworth.w900.lcd_unit_h.neo {
 
 ui::text_template : txt.kenworth.w900.text1.neo {
 	name: "Kenworth W900 Text kleiner"
-	text: "<color value=cc88ff22><font face=/font/big.font xscale=4 yscale=4>%0</font>"
+	text: "<color value=cc88ff22><font face=/font/big.font xscale=3.5 yscale=4.5>%0</font>"
 }
 ui::text_template : txt.kenworth.w900.text2.neo {
 	name: "Kenworth W900 Title"
@@ -23,11 +23,11 @@ ui::text_template : txt.kenworth.w900.text2.neo {
 }
 ui::text_template : txt.kenworth.w900.val_num.neo {
 	name: "Kenworth W900 number + units"
-	text: "<color value=cc88ff22><align hstyle=right><font face=/font/big.font xscale=4 yscale=5>%0</font><offset vshift=30><font face=/font/big.font xscale=2.5 yscale=3> %1</font></align>"
+	text: "<color value=cc88ff22><align hstyle=right><font face=/font/big.font xscale=3.5 yscale=4.5>%0</font><offset vshift=20><font face=/font/big.font xscale=2.5 yscale=3> %1</font></align>"
 }
 ui::text_template : txt.kenworth.w900.val_text.neo {
 	name: "Kenworth W900 text"
-	text: "<color value=cc88ff22><align hstyle=right><font face=/font/big.font xscale=4 yscale=5>%0</font></align>"
+	text: "<color value=cc88ff22><align hstyle=right><font face=/font/big.font xscale=3.5 yscale=4.5>%0</font></align>"
 }
 
 ui::text_template : txt.kenworth.w900.gear.neo {
@@ -36,15 +36,22 @@ ui::text_template : txt.kenworth.w900.gear.neo {
 }
 ui::text_template : txt.kenworth.w900.cur_speed.neo {
 	name: "Kenworth W900  speed"
-	text: "<color value=cc88ff22><align hstyle=center><font face=/font/big.font xscale=7 yscale=9>%0 %1</font></align>"
+	text: "<color value=cc88ff22><align hstyle=center><font face=/font/big.font xscale=7 yscale=9>%0</font><offset vshift=60><font face=/font/big.font xscale=4 yscale=5> %1</font></align>"
 }
-
 ui::text_template : txt.kenworth.w900.cruisectrl.neo {
 	name: "Kenworth W900  cruise"
-	text: "<color value=cc88ff22><align hstyle=right><font face=/font/big.font xscale=5 yscale=7>%0 %1</font></align>"
+	text: "<color value=cc88ff22><align hstyle=right><font face=/font/big.font xscale=5 yscale=7>%0</font></align>"
 }
 ui::text_template : txt.kenworth.w900.direct.neo {
 	name: "Kenworth W900 Number Direction"
 	text: "<color value=cc88ff22><align hstyle=center vstyle=center><font face=/font/big.font xscale=3.5 yscale=4.5>%0</font></align>"
+}
+ui::text_template : txt.kenworth.w900.resttime.neo {
+	name: "Kenworth W900 Number Direction"
+	text: "<color value=cc88ff22><align hstyle=left vstyle=center><font face=/font/big.font xscale=3.5 yscale=4.5>%0</font></align>"
+}
+ui::text_template : txt.kenworth.w900.outtemp.neo {
+	name: "Kenworth W900 Number OutTemp"
+	text: "<color value=cc88ff22><align hstyle=center vstyle=center><font face=/font/big.font xscale=3.5 yscale=4.5>%0°</font></align>"
 }
 }
