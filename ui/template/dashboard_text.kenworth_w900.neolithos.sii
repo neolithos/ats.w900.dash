@@ -44,7 +44,7 @@ ui::text_template : txt.kenworth.w900.cruisectrl.neo {
 }
 ui::text_template : txt.kenworth.w900.direct.neo {
 	name: "Kenworth W900 Number Direction"
-	text: "<color value=cc88ff22><align hstyle=center vstyle=center><font face=/font/big.font xscale=3.5 yscale=4.5>%0</font></align>"
+	text: "<color value=cc88ff22><align hstyle=center vstyle=center><font face=/font/big.font xscale=4.3 yscale=5.3>%0</font></align>"
 }
 ui::text_template : txt.kenworth.w900.resttime.neo {
 	name: "Kenworth W900 Number Direction"
@@ -52,6 +52,16 @@ ui::text_template : txt.kenworth.w900.resttime.neo {
 }
 ui::text_template : txt.kenworth.w900.outtemp.neo {
 	name: "Kenworth W900 Number OutTemp"
-	text: "<color value=cc88ff22><align hstyle=center vstyle=center><font face=/font/big.font xscale=3.5 yscale=4.5>%0°</font></align>"
+	text: "<color value=cc88ff22><align hstyle=center vstyle=center><font face=/font/big.font xscale=4.3 yscale=5.3>%0°</font></align>"
 }
+
+ui::text_template : txt.kenworth.w900.marker.neo {
+	name: "Kenworth W900 Marker"
+	text: "<color value=cc88ff22>\r\n<img src=/material/ui/dashboard/kenworth_w900/details.mat left=%0 right=%5 top=p0 bottom=p64 height=50 width=50><br>
+	<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=%1 right=%6 top=p0 bottom=p64 height=50 width=50><br>
+	<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=%2 right=%7 top=p0 bottom=p64 height=50 width=50><br>
+	<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=%3 right=%8 top=p0 bottom=p64 height=50 width=50><br>
+	<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=%4 right=%9 top=p0 bottom=p64 height=50 width=50><br>"
+}
+
 }

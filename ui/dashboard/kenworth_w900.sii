@@ -90,28 +90,10 @@ ui::text : _nameless._.rightbglit {
  my_parent: _nameless.06caf7760
 }
 
-#ui::text : _nameless._.rect {
-# text: "<img src=/material/ui/dashboard/kenworth_w900/display_warning.mat top=p128 left=p128 right=p408 bottom=p144 xscale=stretch yscale=stretch>"
-# coords_l: 0
-# coords_l: 220
-# coords_r: 420
-# coords_t: 810
-# coords_b: 720
-# area_l: 1
-# area_r: 0
-# area_t: 0
-# area_b: 1
-# id: 10
-# layer: 1
-# tab: -1
-# pointer: -1
-# my_parent: _nameless.06caf7760
-#}
-
 # shared screen, wird immer angezeigt
 ui::group : _nameless._.sharedisplay {
  fitting: false
- my_children: 17
+ my_children: 21
  my_children[0]: _nameless._.dz_oben
  my_children[1]: _nameless._.dz_unten
  my_children[2]: _nameless._.odometer
@@ -133,6 +115,10 @@ ui::group : _nameless._.sharedisplay {
 
  my_children[15]: _nameless._.fuelbar
  my_children[16]: _nameless._.fueldata
+ my_children[17]: _nameless._.fuelbg
+ my_children[18]: _nameless._.fuell1
+ my_children[19]: _nameless._.fuell2
+ my_children[20]: _nameless._.fuell3
 
  coords_l: 0
  coords_r: 800
@@ -470,6 +456,61 @@ ui::text_common : _nameless._.resttime {
  my_parent: _nameless._.sharedisplay
 }
 
+ui::text : _nameless._.fuelbg {
+ text: "<img src=/material/ui/white.mat xscale=stretch yscale=stretch color=ff3e700f>"
+ coords_l: 755
+ coords_r: 775
+ coords_t: 620
+ coords_b: 350
+ id: 0
+ layer: 1
+ tab: -1
+ pointer: -1
+ my_parent: _nameless._.sharedisplay
+}
+
+ui::text : _nameless._.fuell1 {
+ text: "<img src=/material/ui/white.mat xscale=stretch yscale=stretch color=ff053a31>"
+ coords_l: 755
+ coords_r: 775
+ # 553
+ coords_t: 560
+ coords_b: 546
+ id: 0
+ layer: 3
+ tab: -1
+ pointer: -1
+ my_parent: _nameless._.sharedisplay
+}
+
+ui::text : _nameless._.fuell2 {
+ text: "<img src=/material/ui/white.mat xscale=stretch yscale=stretch color=ff053a31>"
+ coords_l: 755
+ coords_r: 775
+ # 485
+ coords_t: 492
+ coords_b: 478
+ id: 0
+ layer: 3
+ tab: -1
+ pointer: -1
+ my_parent: _nameless._.sharedisplay
+}
+
+ui::text : _nameless._.fuell3 {
+ text: "<img src=/material/ui/white.mat xscale=stretch yscale=stretch color=ff053a31>"
+ coords_l: 755
+ coords_r: 775
+ # 417
+ coords_t: 424
+ coords_b: 410
+ id: 0
+ layer: 3
+ tab: -1
+ pointer: -1
+ my_parent: _nameless._.sharedisplay
+}
+
 ui::text : _nameless._.fuelbar {
  text: "<img src=/material/ui/white.mat xscale=stretch yscale=stretch color=cc88ff22>"
  coords_l: 755
@@ -477,7 +518,7 @@ ui::text : _nameless._.fuelbar {
  coords_t: 620
  coords_b: 350
  id: 1070
- layer: 1
+ layer: 2
  tab: -1
  pointer: -1
  my_parent: _nameless._.sharedisplay
@@ -490,7 +531,7 @@ ui::text : _nameless._.fueldata {
  coords_t: 620
  coords_b: 350
  id: 1075
- layer: 1
+ layer: 2
  tab: -1
  pointer: -1
  my_parent: _nameless._.sharedisplay
@@ -500,10 +541,9 @@ ui::text : _nameless._.fueldata {
 # Warning
 ui::group : _nameless._.warning {
  fitting: false
- my_children: 3
- my_children[0]: _nameless.warning.service
- my_children[1]: _nameless.warning.visit
- my_children[2]: _nameless.warning.background
+ my_children: 2
+ my_children[0]: _nameless._.warnimg
+ my_children[1]: _nameless._.warntext
  coords_l: 0
  coords_r: 800
  coords_t: 800
@@ -513,62 +553,42 @@ ui::group : _nameless._.warning {
  area_t: 800
  area_b: 0
  id: 900
+ #id: 600
  layer: 1
  tab: -1
  pointer: -1
  my_parent: _nameless.06caf7760
 }
 
-ui::text_common : _nameless.warning.visit {
- value: "Visit\r\n"
- look_template: txt.kw_w900.text0
- text: ""
- coords_l: 272
- coords_r: 976
- coords_t: 660
- coords_b: 580
- area_l: 1
- area_r: 0
- area_t: 0
- area_b: 1
- id: 0
- layer: 3
- tab: -1
- pointer: -1
- my_parent: _nameless._.warning
-}
-
-ui::text_common : _nameless.warning.service {
- value: "SERVICE!\r\n"
- look_template: txt.kw_w900.text0
- text: ""
- coords_l: 157
- coords_r: 861
- coords_t: 580
- coords_b: 500
- area_l: 1
- area_r: 0
- area_t: 0
- area_b: 1
- id: 0
- layer: 3
- tab: -1
- pointer: -1
- my_parent: _nameless._.warning
-}
-
-ui::text : _nameless.warning.background {
- text: "<ret><offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/display_warning.mat height=400 width=800>"
- coords_l: 0
- coords_r: 800
- coords_t: 800
- coords_b: 0
+ui::text : _nameless._.warnimg {
+ text: "<img src=/material/ui/dashboard/kenworth_w900/details.mat left=p64 right=p128 top=p64 bottom=p128 xscale=stretch yscale=stretch color=cc2323ff>"
+ coords_l: 150
+ coords_r: 390
+ coords_t: 590
+ coords_b: 330
  area_l: 1
  area_r: 0
  area_t: 0
  area_b: 1
  id: 0
  layer: 2
+ tab: -1
+ pointer: -1
+ my_parent: _nameless._.warning
+}
+
+ui::text : _nameless._.warntext {
+ text: "<color value=cc2323ff><align hstyle=left><font face=/font/big.font xscale=3.5 yscale=4.5>Call<br>Service!</font></align>"
+ coords_l: 390
+ coords_r: 700
+ coords_t: 560
+ coords_b: 360
+ area_l: 1
+ area_r: 0
+ area_t: 0
+ area_b: 1
+ id: 0
+ layer: 1
  tab: -1
  pointer: -1
  my_parent: _nameless._.warning
@@ -600,16 +620,13 @@ ui::group : _nameless._.display0 {
  my_parent: _nameless.06caf7760
 }
 
-ui::text : _nameless._.displayint0 {
- text: "<color value=cc88ff22>\r\n<img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p64 right=p128 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n"
+ui::text_common : _nameless._.displayint0 {
+ value: "p0|p64|p0|p0|p0|p64|p128|p64|p64|p64"
+ look_template: txt.kenworth.w900.marker.neo
  coords_l: 10
  coords_r: 138
  coords_t: 620
  coords_b: 300
- area_l: 1
- area_r: 0
- area_t: 0
- area_b: 1
  id: 0
  layer: 1
  tab: -1
@@ -701,16 +718,13 @@ ui::group : _nameless._.display1 {
  my_parent: _nameless.06caf7760
 }
 
-ui::text : _nameless._.displayint1 {
- text: "<color value=cc88ff22>\r\n<img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p64 right=p128 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n"
+ui::text_common : _nameless._.displayint1 {
+ value: "p0|p0|p64|p0|p0|p64|p64|p128|p64|p64"
+ look_template: txt.kenworth.w900.marker.neo
  coords_l: 10
  coords_r: 138
  coords_t: 620
  coords_b: 300
- area_l: 1
- area_r: 0
- area_t: 0
- area_b: 1
  id: 0
  layer: 1
  tab: -1
@@ -840,16 +854,13 @@ ui::group : _nameless._.display2 {
  my_parent: _nameless.06caf7760
 }
 
-ui::text : _nameless._.displayint2 {
- text: "<color value=cc88ff22>\r\n<img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p64 right=p128 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n"
+ui::text_common : _nameless._.displayint2 {
+ value: "p0|p0|p0|p64|p0|p64|p64|p64|p128|p64"
+ look_template: txt.kenworth.w900.marker.neo
  coords_l: 10
  coords_r: 138
  coords_t: 620
  coords_b: 300
- area_l: 1
- area_r: 0
- area_t: 0
- area_b: 1
  id: 0
  layer: 1
  tab: -1
@@ -977,16 +988,13 @@ ui::group : _nameless._.display3 {
  my_parent: _nameless.06caf7760
 }
 
-ui::text : _nameless._.displayint3 {
- text: "<color value=cc88ff22>\r\n<img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p64 right=p128 top=p0 bottom=p64 height=50 width=50><br>\r\n"
+ui::text_common : _nameless._.displayint3 {
+ value: "p0|p0|p0|p0|p64|p64|p64|p64|p64|p128"
+ look_template: txt.kenworth.w900.marker.neo
  coords_l: 10
  coords_r: 138
  coords_t: 620
  coords_b: 300
- area_l: 1
- area_r: 0
- area_t: 0
- area_b: 1
  id: 0
  layer: 1
  tab: -1
@@ -1077,16 +1085,13 @@ ui::group : _nameless._.display4 {
  my_parent: _nameless.06caf7760
 }
 
-ui::text : _nameless._.displayint4 {
- text: "<color value=cc88ff22>\r\n<img src=/material/ui/dashboard/kenworth_w900/details.mat left=p64 right=p128 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n<offset hshift=0 vshift=0><img src=/material/ui/dashboard/kenworth_w900/details.mat left=p0 right=p64 top=p0 bottom=p64 height=50 width=50><br>\r\n"
+ui::text_common : _nameless._.displayint4 {
+ value: "p64|p0|p0|p0|p0|p128|p64|p64|p64|p64"
+ look_template: txt.kenworth.w900.marker.neo
  coords_l: 10
  coords_r: 138
  coords_t: 620
  coords_b: 300
- area_l: 1
- area_r: 0
- area_t: 0
- area_b: 1
  id: 0
  layer: 1
  tab: -1
