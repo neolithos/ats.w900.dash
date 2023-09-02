@@ -93,7 +93,7 @@ ui::text : _nameless._.rightbglit {
 # shared screen, wird immer angezeigt
 ui::group : _nameless._.sharedisplay {
  fitting: false
- my_children: 21
+ my_children: 20
  my_children[0]: _nameless._.dz_oben
  my_children[1]: _nameless._.dz_unten
  my_children[2]: _nameless._.odometer
@@ -107,18 +107,17 @@ ui::group : _nameless._.sharedisplay {
  my_children[8]: _nameless._.park_licht
  my_children[9]: _nameless._.ab_licht
  my_children[10]: _nameless._.tankempty
- my_children[11]: _nameless._.diff
 
- my_children[12]: _nameless._.outtemp
- my_children[13]: _nameless._.restimg
- my_children[14]: _nameless._.resttime
+ my_children[11]: _nameless._.outtemp
+ my_children[12]: _nameless._.restimg
+ my_children[13]: _nameless._.resttime
 
- my_children[15]: _nameless._.fuelbar
- my_children[16]: _nameless._.fueldata
- my_children[17]: _nameless._.fuelbg
- my_children[18]: _nameless._.fuell1
- my_children[19]: _nameless._.fuell2
- my_children[20]: _nameless._.fuell3
+ my_children[14]: _nameless._.fuelbar
+ my_children[15]: _nameless._.fueldata
+ my_children[16]: _nameless._.fuelbg
+ my_children[17]: _nameless._.fuell1
+ my_children[18]: _nameless._.fuell2
+ my_children[19]: _nameless._.fuell3
 
  coords_l: 0
  coords_r: 800
@@ -182,7 +181,7 @@ ui::text_common : _nameless._.odometer {
  value: "2234567\r\n"
  look_template: txt.kenworth.w900.lcd.neo
  text: ""
- coords_l: 590
+ coords_l: 490
  coords_r: 790
  coords_t: 190
  coords_b: 100
@@ -403,22 +402,23 @@ ui::text : _nameless._.tankempty {
  pointer: -1
  my_parent: _nameless._.sharedisplay
 }
-ui::text : _nameless._.diff {
- text: "<img src=/material/ui/dashboard/kenworth_w900/details.mat xscale=stretch yscale=stretch left=p192 right=p256 top=p77 bottom=p125 color=cc88ff22>"
- coords_l: 315
- coords_r: 385
- coords_t: 300
- coords_b: 230
- area_l: 1
- area_r: 0
- area_t: 0
- area_b: 1
- id: 1490
- layer: 1
- tab: -1
- pointer: -1
- my_parent: _nameless._.sharedisplay
-}
+
+#ui::text : _nameless._.diff {
+# text: "<img src=/material/ui/dashboard/kenworth_w900/details.mat xscale=stretch yscale=stretch left=p192 right=p256 top=p77 bottom=p125 color=cc88ff22>"
+# coords_l: 315
+# coords_r: 385
+# coords_t: 300
+# coords_b: 230
+# area_l: 1
+# area_r: 0
+# area_t: 0
+# area_b: 1
+# id: 1490
+# layer: 1
+# tab: -1
+# pointer: -1
+# my_parent: _nameless._.sharedisplay
+#}
 
 ui::text : _nameless._.restimg {
  text: "<img src=/material/ui/dashboard/kenworth_w900/details.mat xscale=stretch yscale=stretch left=p192 right=p256 top=p0 bottom=p64 color=cc88ff22>"
